@@ -1,0 +1,249 @@
+@charset "utf-8";
+
+@font-face{ 
+	font-family: 'CaviarDreams';
+	src: url('web fonts/caviardreams_regular_macroman/CaviarDreams-webfont.eot');
+	src: url('web fonts/caviardreams_regular_macroman/CaviarDreams-webfont.eot?iefix') format('eot'),
+	     url('web fonts/caviardreams_regular_macroman/CaviarDreams-webfont.woff') format('woff'),
+	     url('web fonts/caviardreams_regular_macroman/CaviarDreams-webfont.ttf') format('truetype'),
+	     url('web fonts/caviardreams_regular_macroman/CaviarDreams-webfont.svg#webfont') format('svg');
+}
+
+@font-face{ 
+	font-family: 'FontAwesome';
+	src: url('web fonts/fontawesome-webfont-webfont.eot');
+	src: url('web fonts/fontawesome-webfont-webfont.eot?iefix') format('eot'),
+	     url('web fonts/fontawesome-webfont-webfont.woff') format('woff'),
+	     url('web fonts/fontawesome-webfont-webfont.ttf') format('truetype'),
+	     url('web fonts/fontawesome-webfont-webfont.svg#webfont') format('svg');
+}
+
+@font-face{ 
+	font-family: 'Rochester';
+	src: url('web fonts/rochester-fontfacekit/web fonts/rochester_regular_macroman/rochester-regular-webfont.eot');
+	src: url('web fonts/rochester-fontfacekit/web fonts/rochester_regular_macroman/rochester-regular-webfont.eot?iefix') format('eot'),
+	     url('web fonts/rochester-fontfacekit/web fonts/rochester_regular_macroman/rochester-regular-webfont.woff') format('woff'),
+	     url('web fonts/rochester-fontfacekit/web fonts/rochester_regular_macroman/rochester-regular-webfont.ttf') format('truetype'),
+	     url('web fonts/rochester-fontfacekit/web fonts/rochester_regular_macroman/rochester-regular-webfont.svg#webfont') format('svg');
+}
+
+html { 
+background-color:#fff;
+font-size:14pt;
+font-family:"CaviarDreams",sans-serif;
+color:#6e4c32; 
+} 
+
+p{
+font:14pt #6e4c32 "CaviarDreams";
+padding:20px;
+}
+
+h1{
+font-size:30pt;
+color:#f69b9a;
+font-family:"Rochester";
+text-align:center;
+}
+
+html, body {
+    min-height: 100%;
+}
+
+	#navbar{
+	float:left;
+	position:fixed;
+	width:100%;
+	background-color:#ffffff;
+	color:#6e4c32;
+	font-family:"CaviarDreams",Tahoma,sans-serif;
+	text-transform:uppercase;
+	font-size:7pt;
+	height:100px;
+	margin:-10px -100px 0;
+	padding:10px 100px 0;
+	}
+	
+	#navbar ul li img{
+	margin-left:-22px;
+	}
+
+	
+	#navbar ul{
+	padding-top:15px;
+	margin-left:-50px;
+	list-style:none;
+	}
+
+	#navbar ul li{
+	float:left;
+	width:20%;
+	}
+		
+	#navbar ul li a{
+	display:block;
+	margin:5px 10px 0;
+	padding:.2em .5em;
+	text-align:center;
+	color:#6e4c32;
+	text-decoration:none;
+	}
+	
+	#navbar ul li a.selected{
+	color:#f69b9a;
+	font-weight:bold;
+	}
+	
+	#navbar ul li a:hover{
+	color:#f69b9a;
+	}
+	
+
+
+
+
+.content img{
+width:100%;
+}
+
+/*begin footer stuff*/
+
+.page-wrap {
+  min-height: 100%;
+    clear:both;
+  margin-bottom: -85px; 
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+    clear:both;
+}
+.site-footer, .page-wrap:after {
+  height: 85px; 
+    clear:both;
+}
+.site-footer {
+  background: #f69b9a;
+  clear:both;
+  padding:20px;
+  color:#fff;
+  text-align:center;
+  font-family:"CaviarDreams",sans-serif;
+  font-size:12pt;
+}
+
+#hours{
+	display:block;
+	float:left;
+	margin-left:-5000px;
+	margin-top:7px;
+	line-height:9pt;
+	text-align:left;
+	font-size:8pt;
+	}
+	
+#address{
+	display:inline-block;
+	float:left;
+	margin-top:7px;
+	line-height:18pt;
+	margin-left:-5000px;
+
+	font-size:14pt;
+	text-align:center;
+	}
+	
+#contact{
+	display:block;
+	line-height:18pt;
+	text-align:center;
+	font-size:14pt;
+	}
+	
+#contact a{
+	font-size:9pt;
+	text-decoration:none;
+	color:#fff;
+}
+
+#contact a:hover{
+	color:#6e4c32;
+	}
+
+
+	
+/*end footer stuff*/
+
+
+
+@media (min-width: 400px) {
+
+#navbar{
+font-size:11pt;
+}
+
+div.content{
+clear:both;
+}
+
+
+.site-footer, .page-wrap:after { 
+  }
+
+.page-wrap {
+  min-height: 100%;
+    clear:both;
+}
+
+#hours{
+	display:inline-block;
+	margin-left:0px;
+	}
+	
+#address{
+margin-left:0px;
+float:none;
+}
+
+#contact{
+	display:inline-block;
+	float:right;
+	}
+
+#navbar ul li img{
+margin-left:0px;
+}
+
+
+
+h1{
+font-size:60pt;
+}
+
+}
+
+
+@media (min-width: 1000px) {
+
+
+
+
+div.content{
+width:100%;
+}
+
+
+}
+
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+
+
+
+
+/* CSS Document */
+

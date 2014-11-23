@@ -1,0 +1,220 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Ele Makes Cakes</title>
+ <link rel="stylesheet" type="text/css" href="template.css">
+<link rel="stylesheet" href="font-awesome-4.2.0/css/font-awesome.min.css">
+<style type="text/css">
+#mainpic{
+width:100%;
+}
+
+#quickinfo{
+width:100%;
+text-align:center;
+font-family:"CaviarDreams",sans-serif;
+background-image:url(assets/crossword/crossword.png);
+background-repeat:repeat;
+}
+
+#navbar{
+  z-index: 1;
+}
+
+#contact-form{
+  background-color: #302013;
+  width:100%;
+}
+
+ form input{
+    display: inline-block;
+    text-align: center;
+    position: auto;
+    }
+
+#contact-form h1{
+  color: #ffffff;
+  padding: 20px;
+}
+
+#map-canvas {
+  clear: both;
+  float: left;
+  margin-top: 90px;
+  width: 100%;
+  height: 400px;
+  background-color: #CCC;
+}
+
+input.rounded {
+    border: 1px solid #ccc;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -moz-box-shadow: 2px 2px 3px #666;
+    -webkit-box-shadow: 2px 2px 3px #666;
+    box-shadow: 2px 2px 3px #666;
+    font-size: 20px;
+    padding: 4px 7px;
+    outline: 0;
+    -webkit-appearance: none;
+}
+input.rounded:focus {
+    border-color: #339933;
+}
+textarea.rounded {
+    border: 1px solid #ccc;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -moz-box-shadow: 2px 2px 3px #666;
+    -webkit-box-shadow: 2px 2px 3px #666;
+    box-shadow: 2px 2px 3px #666;
+    font-size: 20px;
+    padding: 4px 7px;
+    outline: 0;
+    -webkit-appearance: none;
+}
+textarea.rounded:focus {
+    border-color: #339933;
+}
+
+
+</style>
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script>
+      function initialize() {
+        var mapCanvas = document.getElementById('map-canvas');
+        var myLatLng = new google.maps.LatLng(33.9782439, -118.0878833)
+        var mapOptions = {
+          center: myLatLng,
+          zoom: 13, 
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions)
+        var image = 'assets/Logo_marker.png';
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          icon: image
+        });
+      }//initialize()
+      google.maps.event.addDomListener(window, 'load', initialize);
+      
+
+
+    </script>
+	</head>
+	<body>
+<div id="navbar">
+	<ul id="nav">
+	<li><a href="home.html" class="selected"><br>Home</a></li>
+	<li><a href="about.html"><br>About</a></li>
+	<li><a href="home.html"><img src="assets/logo.png" alt="Home Page" style=
+	"margin-top:-8px"/></a></li>
+	<li><a href="cakes.html"><br>Cakes</a></li>
+	<li><a href="contact.html"><br>Get in Touch</a></li>
+	</ul>
+  
+ </div>
+
+<div class="page-wrap">
+
+<div id="content">
+
+<!--PLACE CONTENT HERE!-->
+
+
+<div id="map-canvas"></div> 
+
+<form id="contact-form" action="form_process.php" method="POST">
+  <table>
+    <h1>Let's Celebrate!</h1>
+      <tr>
+        <td><input name='name' class="rounded" size='33%' placeholder='Name *' /></td>
+        <td><input name='company' class="rounded" size='33%' placeholder='Company *' /></td>
+        <td><input name='phone' class="rounded" size='33%' placeholder='Phone *' /></td>
+      </tr>
+      <tr>
+        <td><input name='email' class="rounded" size='33%' placeholder='Email *' /></td>
+        <td><input name='start_date' class="rounded" size='33%' placeholder='Start Date *' /></td>
+        <td><input name='budget' class="rounded" size='33%' placeholder='Budget *' /></td>
+      </tr>
+
+  </table>
+
+   <table>
+      <tr>
+        <td>
+        <textarea name="myTextBox" class="rounded" cols="90%" rows='5' placeholder="Tell us a bit about what we can help you with *"></textarea>
+        </td>
+      </tr>
+      <tr>
+        <td>
+        <!-- <input type="button" value="Submit"> -->
+        <button type="button">Submit</button>
+        </td>
+      </tr>
+  </table>
+
+</form>
+
+
+</div>
+</div> 
+
+</div>
+
+<footer class="site-footer" style="clear:both">
+
+<div id="hours">
+<table width="200px" border="0">
+  <tr>
+    <td><b>Mon - Wed</b></td>
+    <td>10:00am - 7:00pm</td>
+  </tr>
+  <tr>
+    <td><b>Thursday</b></td>
+    <td>10:00am - 5:00pm</td>
+  </tr>
+  <tr>
+    <td><b>Friday</b></td>
+    <td>10:00am - 7:00pm</td>
+  </tr>
+  <tr>
+    <td><b>Saturday</b></td>
+    <td>9:00am - 6:00pm</td>
+  </tr>
+  <tr>
+    <td><b>Sunday</b></td>
+    <td>Closed</td>
+  </tr>
+</table>
+
+
+</div>
+
+<div id="address">
+Ele Makes Cakes<br>
+Washington Boulevard<br>
+Los Angeles, CA
+</div>
+
+<div id="contact">
+<a href="mailto:elemakescakes@gmail.com">elemakescakes@gmail.com</a><br>
+(626) 590-8406<br>
+<a href="https://www.facebook.com/EleMakesCakes" alt="Facebook" style="font:FontAwesome;font-size:25px;padding-right:10px"><i class="fa fa-facebook-square"></i></a>
+<a href="https://www.instagram.com/EleMakesCakes" alt="Instagram" style="font:FontAwesome;font-size:25px;padding-right:10px"><i class="fa fa-instagram"></i></a>
+<a href="http://elemakescakes.tumblr.com" alt="Tumblr" style="font:FontAwesome;font-size:25px;padding-right:10px"><i class="fa fa-tumblr-square"></i></a>
+<a href="http://www.yelp.com/biz/ele-makes-cakes-los-angeles" alt="Yelp" style="font:FontAwesome;font-size:25px"><i class="fa fa-yelp"></i></a>
+</div>
+
+
+
+</footer>
+
+
+
+	</body>
+</html>
